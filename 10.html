@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project on Async JS</title>
+</head>
+
+<body>
+
+    <h1>Hello Duniya</h1>
+    <button id="stopInterval"> Stop Interval </button>
+    <button id="stopTimeOut"> Stop Time </button>
+
+</body>
+
+    <script>
+        const TimeOut1 = setTimeout(function(){ // Prints output in consoleonce after the set time.
+            console.log("Ashish Kandel");
+        }, 5000) 
+
+        const changeMe = setInterval(function(){ //Prints output on console on  set interval
+            console.log("Hey, Ashish");  
+        },2000)
+
+        document.querySelector('h1').innerHTML = "Hello, Ashish";
+
+
+        const changeText = function(){
+            console.log(documrnt.querySelector('h1').innerHTML = "This Code changes changes the text after 5 seconds"); 
+        }
+        setTimeout({changeText},1000);
+
+        document.querySelector('#stopInterval').addEventListener('click', function (){  // Stop the action of changeMe variable ( setInterval() ) on pressing stop button.
+            clearInterval(changeMe);
+            console.log("Interval Print has be stopped."); 
+        })
+
+        document.querySelector('#stopTimeOut').addEventListener('click', function(){
+            clearTimeout(TimeOut1);
+            console.log("Time Out has been stopped.")
+        })
+
+    </script>
+
+</html>
